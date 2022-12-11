@@ -49,15 +49,15 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfo(
-                "API Rest K2 Partnering ",
+                "API Curso Nelio Alves ",
+                "Curso Nelio Alves ensiando a fazer uma API",
+                "Versão 0.1",
                 "",
-                "Versão 1.0",
-                "",
-                new Contact("Fernando A. Oliveira",
-                        "https://github.com/fernandoguide",
-                        "fernandoguide2014@gmail.com"),
-                "",
-                "",
+                new Contact("Rubens Leme",
+                        "https://github.com/rubenssleme/",
+                        "rubenss.leme@yahoo.com.br"),
+                "GNU",
+                "https://github.com/rubenssleme/license",
                 Collections.emptyList()
         );
     }
