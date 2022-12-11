@@ -2,6 +2,7 @@ package com.curso2020.curso.controller;
 
 import java.util.List;
 
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,13 +19,14 @@ public class PedidoRecurso {
 	
 	@Autowired
 	private PedidoServico pedidoServico;
-	
+
+	@ApiOperation(value = "Lista todos os pedidos!")
 	@GetMapping
 	public ResponseEntity<List<Pedido>> findAll(){
 		List<Pedido> list = pedidoServico.findAll();
 		return ResponseEntity.ok().body(list);
 	}
-	
+	@ApiOperation(value = "Lista pedido por Id!")
 	@GetMapping(value="/{id}")
 	public ResponseEntity<Pedido> findById(@PathVariable Long id){
 		Pedido obj = pedidoServico.findById(id);
