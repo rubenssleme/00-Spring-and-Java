@@ -3,6 +3,7 @@ package com.curso2020.curso.controller;
 import java.net.URI;
 import java.util.List;
 
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,19 +23,19 @@ public class ProdutoRecurso {
 
 	@Autowired
 	private ProdutoServico servico;
-
+	@ApiOperation(value = "Lista todos os produtos!")
 	@GetMapping
 	public ResponseEntity<List<Produto>> findAll() {
 		List<Produto> list = servico.findAll();
 		return ResponseEntity.ok().body(list);
 	}
-
+	@ApiOperation(value = "Lista produto por Id!")
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<Produto> findById(@PathVariable Long id) {
 		Produto obj = servico.findById(id);
 		return ResponseEntity.ok().body(obj);
 	}
-
+	@ApiOperation(value = "Adicona produto por Id!")
 	@PostMapping
 	public ResponseEntity<Produto> insert(@RequestBody Produto obj) {
 		obj = servico.insert(obj);
