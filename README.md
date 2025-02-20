@@ -1,7 +1,7 @@
 # Ecossistema-Spring-com-linguagem-Java
 Este teste busca avaliar quesitos técnicos para as pessoas que se candidatem às vagas de desenvolvimento back-end possam o Ecossistema Spring: Framework, Spring Boot, Spring MVC, Spring Security, Springfox-Swagger e Spring Data.
 
-API usando Java 1.8 ou 11 e Spring Boot.
+API usando Java 11 ou 17 e Spring Boot.
 ### Como executar a aplicação
 Certifique-se de ter instalado:
 ##### Pré-requisitos
