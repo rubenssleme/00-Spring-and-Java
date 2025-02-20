@@ -4,7 +4,6 @@ import com.curso2020.curso.model.dto.UsuarioDTO;
 import com.curso2020.curso.model.entities.Usuario;
 import com.curso2020.curso.model.response.UsuarioResponse;
 import org.mapstruct.Mapper;
-
 import java.util.List;
 
 @Mapper(componentModel = "spring")
