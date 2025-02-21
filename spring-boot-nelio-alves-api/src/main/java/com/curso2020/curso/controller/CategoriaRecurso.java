@@ -3,7 +3,7 @@ package com.curso2020.curso.controller;
 import java.net.URI;
 import java.util.List;
 
-import io.swagger.annotations.ApiOperation;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,20 +24,20 @@ public class CategoriaRecurso {
 	@Autowired
 	private CategoriaServico servico;
 
-	@ApiOperation(value = "Busca Todas as Categorias")
+
 	@GetMapping
 	public ResponseEntity<List<Categoria>> findAll() {
 		List<Categoria> list = servico.findAll();
 		return ResponseEntity.ok().body(list);
 	}
 
-	@ApiOperation(value = "Busca Categoria por Id")
+
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<Categoria> findById(@PathVariable Long id) {
 		Categoria obj = servico.findById(id);
 		return ResponseEntity.ok().body(obj);
 	}
-	@ApiOperation(value = "Adicionar uma Categoria por Id e Nome")
+
 	@PostMapping
 	public ResponseEntity<Categoria> insert(@RequestBody Categoria obj) {
 		obj = servico.insert(obj);
